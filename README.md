@@ -1,4 +1,4 @@
-##How to generate a static website 怎么生成静态网站
+## How to generate a static website 怎么生成静态网站
 + 1  安装python3和git(略)
 + 2  git clone https://github.com/dongguangming/How-to-generate-a-static-website.git website
 
@@ -9,7 +9,7 @@
         然后通过浏览器访问[mysite](http://192.168.10.42:9999)
 
 
-###参考文献
+### 参考文献
 [Powerful static website generator with flask](https://nicolas.perriault.net/code/2012/dead-easy-yet-powerful-static-website-generator-with-flask/)
 
 [Build a Simple, Static, Markdown-Powered Blog with Flask](http://www.jamesharding.ca/posts/simple-static-markdown-blog-in-flask/)
