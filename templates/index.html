@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+    <div class="entries">  
+    {% for post in posts %}
+        <div class="entry">
+            <div class="detail">
+                <h1 class="entry-title">
+                    {% if 'tutorials' in post.tags %}
+                        <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"><i class="icon-list-alt"></i> {{ post.title }}</a>
+                    {% else %}
+                        {% if 'community' in post.tags %}
+                            <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"><i class="icon-beaker"></i> {{ post.title }}</a>
+                        {% else %}
+                            {% if 'events' in post.tags %}
+                            <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"><i class="icon-calendar"></i> {{ post.title }}</a>
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}    
+                </h1>
+                <div class="entry-date"><p>{{ post.date }}</p></div>
+                <div class="summary">
+                    <p>{{ post.summary }} <span><a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}"> 更多 <i class="icon-hand-right"></i></a></span></p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock content %}
